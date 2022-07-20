@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
   <title>KnockOut Portfolio</title>
 </head>
 <body>
@@ -21,10 +22,11 @@
   </header>
   <main>
     <section>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quasi. Error possimus facilis saepe nulla, aperiam eius quasi in enim dignissimos non obcaecati repellendus. Non eligendi dolorem velit fuga enim?</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis autem provident asperiores quasi veniam deserunt expedita culpa, facere cupiditate omnis consectetur praesentium consequuntur dolorem voluptates distinctio. Iusto tenetur eius amet.</p>
+      <p data-bind='text: counter'></p>
+      <button data-bind='click: increase'>+</button>
+      <button data-bind='click: decrease'>-</button>
     </section>
   </main>
-  <script src="koscript.js"></script>
 </body>
+<script src="./koscript.js"></script>
 </html>
