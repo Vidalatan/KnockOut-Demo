@@ -12,19 +12,21 @@
   <header>
     <img class='headerImg' src="https://via.placeholder.com/50x50.png/000000/FFFFFF?text=Vidal+Tan" alt="Placeholder Image">
     <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Resume</li>
+      <ul data-bind="foreach: navLinks">
+        <li data-bind="text: $data, click: $root.navClick"></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section>
-      <p data-bind='text: counter'></p>
-      <button data-bind='click: increase'>+</button>
-      <button data-bind='click: decrease'>-</button>
+    <section data-bind='visible: currentWindow() == "#!"'>
+      <p>You are at #!</p>
+      <p data-bind="visible: !navClicked()">You can tell you are in #! (or the home page) because the URL says you are. But if you want to test browser navigation truely works, click on any of the links in the nav bar.</p>
+    </section>
+    <section data-bind='visible: currentWindow() == "#!about"'>
+      <p>You are at #!about</p>
+    </section>
+    <section data-bind='visible: currentWindow() == "#!contact"'>
+      <p>You are at #!contact</p>
     </section>
   </main>
 </body>
