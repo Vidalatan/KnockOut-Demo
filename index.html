@@ -19,15 +19,18 @@
   </header>
   <main>
     <section data-bind='visible: currentWindow() == "#!"'>
-      <p>You are at #!</p>
+      <p>You are at the home page!</p>
       <p data-bind="visible: !navClicked()">You can tell you are in #! (or the home page) because the URL says you are. But if you want to test browser navigation truely works, click on any of the links in the nav bar.</p>
       <p data-bind="text: progMsg, visible: navClicked()"></p>
     </section>
     <section data-bind='visible: currentWindow() == "#!about"'>
-      <p>You are at #!about</p>
+      <p>You are at the about page!</p>
     </section>
     <section data-bind='visible: currentWindow() == "#!contact"'>
-      <p>You are at #!contact</p>
+      <p>You are at the contact page!</p>
+    </section>
+    <section data-bind='visible: currentWindow() == "#!resume"'>
+      <p>You are at the resume page!</p>
     </section>
   </main>
 </body>
