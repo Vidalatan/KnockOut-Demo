@@ -21,6 +21,7 @@
     <section data-bind='visible: currentWindow() == "#!"'>
       <p>You are at #!</p>
       <p data-bind="visible: !navClicked()">You can tell you are in #! (or the home page) because the URL says you are. But if you want to test browser navigation truely works, click on any of the links in the nav bar.</p>
+      <p data-bind="text: progMsg, visible: navClicked()"></p>
     </section>
     <section data-bind='visible: currentWindow() == "#!about"'>
       <p>You are at #!about</p>
